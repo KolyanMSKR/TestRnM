@@ -71,6 +71,7 @@ final class CharacterInteractor: CharacterBusinessLogic, CharacterDataStore {
                         self.presenter.presentCharacters(characters: self.characters)
                     }
                     characterCoreDataWorker.saveToCoreData(characters: characterResponse.results)
+                    
                 case .failure(let error):
                     self.presenter.presentError(error: error)
                 }
