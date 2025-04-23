@@ -31,3 +31,9 @@ jobs:
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 16 Pro Max' \
             CODE_SIGNING_ALLOWED=NO
+
+      - name: Install SwiftFormat
+        run: brew install swiftformat
+
+      - name: Run SwiftFormat
+        run: swiftformat . --lint --strict
