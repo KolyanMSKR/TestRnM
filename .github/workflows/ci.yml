@@ -37,3 +37,13 @@ jobs:
 
       - name: Run SwiftFormat
         run: swiftformat . --lint --strict
+
+      - name: Notify Telegram
+        run: |
+          STATUS="✅ Build succeeded"
+          if [ "${{ job.status }}" != "success" ]; then
+            STATUS="❌ Build failed"
+          fi
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+            -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+            -d text="${STATUS} for TestRnM on GitHub Actions"
