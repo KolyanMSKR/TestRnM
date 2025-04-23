@@ -84,10 +84,3 @@ final class CharacterInteractor: CharacterBusinessLogic, CharacterDataStore {
     }
 
 }
-
-
-
-
-
-
-
