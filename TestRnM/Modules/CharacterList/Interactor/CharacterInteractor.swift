@@ -57,7 +57,7 @@ final class CharacterInteractor: CharacterBusinessLogic, CharacterDataStore {
             guard !isLoading, currentPage <= totalPages else { return }
 
             isLoading = true
-            
+
             characterService.fetchCharacters(page: currentPage) { [weak self] result in
                 guard let self else { return }
                 self.isLoading = false

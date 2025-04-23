@@ -23,6 +23,6 @@ extension CharacterEntity {
 
 }
 
-extension CharacterEntity : Identifiable {
+extension CharacterEntity: Identifiable {
 
 }
