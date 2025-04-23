@@ -22,14 +22,14 @@ final class CharacterService: CharacterServiceProtocol {
     func fetchCharacters(page: Int, completion: @escaping (Result<CharacterResponse, Error>) -> Void) {
         provider.request(.characters(page: page)) { result in
             switch result {
-            case .success(let response):
+            case let .success(response):
                 do {
                     let decodedData = try JSONDecoder().decode(CharacterResponse.self, from: response.data)
                     completion(.success(decodedData))
                 } catch {
                     completion(.failure(error))
                 }
-            case .failure(let error):
+            case let .failure(error):
                 completion(.failure(error))
             }
         }

@@ -5,8 +5,8 @@
 //  Created by Anderen on 01.04.2025.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 final class CoreDataStack {
 
@@ -18,7 +18,7 @@ final class CoreDataStack {
 
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TestRnM")
-        container.loadPersistentStores { storeDescription, error in
+        container.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("Unresolved error \(error)")
             }
@@ -39,5 +39,5 @@ final class CoreDataStack {
             }
         }
     }
-    
+
 }

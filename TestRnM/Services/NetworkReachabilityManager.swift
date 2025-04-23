@@ -31,5 +31,5 @@ class NetworkReachabilityManager: NetworkReachabilityProtocol {
     deinit {
         monitor.cancel()
     }
-    
+
 }

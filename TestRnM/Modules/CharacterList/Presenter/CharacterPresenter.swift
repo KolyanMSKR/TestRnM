@@ -8,7 +8,7 @@
 import Foundation
 
 final class CharacterPresenter: CharacterPresentationLogic {
-    
+
     weak var viewController: CharacterDisplayLogic?
 
     func presentCharacters(characters: [Character]) {
@@ -21,4 +21,3 @@ final class CharacterPresenter: CharacterPresentationLogic {
     }
 
 }
-

@@ -1,5 +1,5 @@
 //
-//  CharacterWorker.swift
+//  CharacterCoreDataWorker.swift
 //  TestRnM
 //
 //  Created by Anderen on 03.04.2025.

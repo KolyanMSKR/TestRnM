@@ -5,7 +5,6 @@
 //  Created by Anderen on 02.04.2025.
 //
 
-
 import UIKit
 
 protocol ReusableView: AnyObject {

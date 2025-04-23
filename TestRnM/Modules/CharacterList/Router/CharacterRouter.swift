@@ -30,7 +30,7 @@ final class CharacterRouter: CharacterRoutingLogic {
 
         presenter.viewController = characterViewContoller
         interactor.router = self
-        self.viewController = characterViewContoller
+        viewController = characterViewContoller
 
         let navigationController = UINavigationController(rootViewController: characterViewContoller)
         window.rootViewController = navigationController
@@ -46,5 +46,5 @@ final class CharacterRouter: CharacterRoutingLogic {
 
         viewController?.navigationController?.pushViewController(detailViewController, animated: true)
     }
-    
+
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 final class CharacterDetailRouter: CharacterDetailRoutingLogic {
-    
+
     weak var viewController: UIViewController?
 
     func routeBack() {

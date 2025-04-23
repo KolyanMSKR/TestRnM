@@ -40,7 +40,7 @@ final class CharacterCell: UITableViewCell, ReusableView {
 
         setupViews()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -79,8 +79,6 @@ private extension CharacterCell {
 
         contentView.addSubview(imageTitleView)
         contentView.addSubview(containerStackView)
-
-
 
         setupLayout()
     }

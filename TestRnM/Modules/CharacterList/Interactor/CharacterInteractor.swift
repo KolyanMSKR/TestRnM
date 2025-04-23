@@ -39,7 +39,7 @@ final class CharacterInteractor: CharacterBusinessLogic, CharacterDataStore {
         characterCoreDataWorker: CharacterCoreDataWorkerProtocol
     ) {
         self.presenter = presenter
-        self.characterService = apiService
+        characterService = apiService
         self.reachability = reachability
         self.characterCoreDataWorker = characterCoreDataWorker
     }
@@ -63,7 +63,7 @@ final class CharacterInteractor: CharacterBusinessLogic, CharacterDataStore {
                 self.isLoading = false
 
                 switch result {
-                case .success(let characterResponse):
+                case let .success(characterResponse):
                     self.characters.append(contentsOf: characterResponse.results)
                     self.totalPages = characterResponse.info.pages
                     self.currentPage += 1
@@ -71,8 +71,8 @@ final class CharacterInteractor: CharacterBusinessLogic, CharacterDataStore {
                         self.presenter.presentCharacters(characters: self.characters)
                     }
                     characterCoreDataWorker.saveToCoreData(characters: characterResponse.results)
-                    
-                case .failure(let error):
+
+                case let .failure(error):
                     self.presenter.presentError(error: error)
                 }
             }

@@ -31,7 +31,7 @@ extension RickAndMortyAPI: TargetType {
 
     var task: Task {
         switch self {
-        case .characters(let page):
+        case let .characters(page):
             return .requestParameters(
                 parameters: ["page": page],
                 encoding: URLEncoding.queryString
@@ -42,5 +42,5 @@ extension RickAndMortyAPI: TargetType {
     var headers: [String: String]? {
         return ["Content-Type": "application/json"]
     }
-    
+
 }

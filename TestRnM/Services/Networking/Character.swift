@@ -23,7 +23,7 @@ struct Character: Decodable {
 enum Status: String, Codable {
     case alive = "Alive"
     case dead = "Dead"
-    case unknown = "unknown"
+    case unknown = "Unknown"
 }
 
 struct PaginationInfo: Decodable {
